@@ -1,0 +1,52 @@
+var again: int
+again:= 3
+var num1:int
+var num2:int
+var answer:int
+var userAnswer: int
+var correct: int
+var wrong: int
+var questionnum: int
+
+put "Welcome to the MATH GAME!"
+put "-------------------------"
+put "I will ask you the sum of two numbers" 
+put "All you have to write is the answer. Ex. '2'."
+loop
+    exit when again not= 3
+    put"How many questions would you like to try?"
+    get questionnum
+
+    correct:= 0
+    wrong:= 0
+
+    loop
+        exit when questionnum = 0
+        randint(num1,1,100)
+        randint(num2,1,100)
+        answer := num1 + num2
+        put "What is ", num1, " + ", num2, "?"
+        get userAnswer
+        if(userAnswer = answer) then
+            put "Correct!"
+            correct:= correct + 1
+            questionnum:= questionnum - 1
+        else
+            put "Wrong!"
+            wrong:= wrong + 1
+            questionnum:= questionnum - 1
+    end if
+    end loop
+    again:= 0
+    
+    put "------------------------"   
+    put "You got ",correct, " question(s) right and ",wrong, " question(s) wrong."
+    put "Would you like to go again?"
+    put "1 for Yes, 2 for No."
+    get again
+    if(again = 1)then
+        again:= 3
+    else
+        put "Thank you for playing!"
+end if
+end loop
