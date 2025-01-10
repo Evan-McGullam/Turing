@@ -1,0 +1,272 @@
+var start:int
+var questionbank1:array 0..3 of string:= init("Who played Captain Kirk in the 2009 Star Trek?\n1)Chris Pine\n2)William Shatner\n3)Sean Connery\n4)Jimmy Bennet", "Who played Luke Skywalker in the Star Wars Trilogy?\n1)Harrison Ford\n2)Luke Brett\n3)Mark Hamill\n4)Carrie Fisher","Who directed the 2023 sci-fi blockbuster Oppenheimer?\n1)Steven Spielburg\n2)James Cameron\n3)Alfred Hitchcock\n4)Christopher Nolan", "Which actor portrayed Elvis Presley in the 2022 biopic Elvis?\n1)Tom Hanks\n2)Austin Butler\n3)Ryan Gosling\n4)Dean Gilderson")
+var questionbank2:array 0..3 of string:= init("Which movie won the Academy Award for Best Picture in 2023?\n1)Wish\n2)Everything Everywhere All At Once\n3)Wonka\n4)Hit Man", "Which 2021 Disney animated film, set in Colombia, featured the hit song 'We Don't Talk About Bruno'?\n1)Cars 3\n2)Luca\n3)Encanto\n4)Cruella","What video game franchise do the characters 'Pikachu' & 'Squirtle' belong to?\n1)Yu-Gi-Oh\n2)One Piece\n3)Pokemon\n4)Blue Box", "When was 'Star Wars Republic Commando | The Game', released?\n1)2005\n2)2009\n3)2002\n4)2007")
+var questionbank3:array 0..3 of string:= init("Who was the first female artist to win 3 Grammy Awards for Album of The Year?\n1)Taylor Swift\n2)Beyoncé\n3)P!NK\n4)Olivia Rodrigo", "Which artist created the song 'Blinding Lights'?\n1)Harry Styles\n2)Drake\n3)Pharrell Williams\n4)The Weekend","What K-Pop group the USA Billboard Hot 100 with the single 'Dynamite'?\n1)Stray Kids\n2)BTS\n3)Enhypen\n4)TXT", "Which pop-artist collaborated with The Kid LAROI in the hit song 'Stay'?\n1)Shawn Mendes\n2)Justin Bieber\n3)Harry Styles\n4)Tame Impala")
+var questionbank4:array 0..3 of string:= init("Who is the lead singer of Maroon 5?\n1)Bruno Mars\n2)Prince\n3)Adam Levine\n4)Freddie Mercury", "Who won the 2023 Grammy for 'Best New Artist'?\n1)Sabrina Carpenter\n2)Samara Joy\n3)Olivia Rodrigo\n4)Latto","Which artist is responsible for the hit song 'Old Town Road'?\n1)Lil Wayne\n2)Lil Dean\n3)Lil Ben\n4)Lil Nas X", "What is the highest streamed song on Spotify?\n1)Shape of You\n2)Despacito\n3)Congratulations\n4)Blinding Lights")
+var questionbank5:array 0..3 of string:= init("What is the largest desert in the world?\n1)Antarctica\n2)Sahara\n3)Colorado\n4)Arabian", "What country has the most natural lakes?\n1)United States\n2)Brazil\n3)Canada\n4)Russia","What is the capital of Australia?\n1)Canberra\n2)Sydney\n3)Melbourne\n4)Brisbane", "Which continent is known as the 'Dark Continent'?\n1)North America\n2)Africa\n3)Asia\n4)Europe")
+var questionbank6:array 0..3 of string:= init("Which city is known as 'The Big Apple'?\n1)Los Angeles\n2)Toronto\n3)Washington\n4)New York", "Which city is home to the monument 'Christ The Redeemer'?\n1)Mexico City\n2)Rio de Janeiro\n3)Buenos Aires\n4)Mumbai","What country is both a country and a continent?\n1)Madagascar\n2)Austrailia\n3)Japan\n4)Greenland", "What country has the highest mountain in the world?\n1)Brazil\n2)Pakistan\n3)India\n4)Nepal")
+var questionbank7:array 0..3 of string:= init("What team won the 2023 Superbowl?\n1)Denver Broncos\n2)Kansas City Chiefs\n3)New England Patriots\n4)Tampa Bay Buccaneers", "When did the first modern Olympic Games take place?\n1)1896\n2)1900\n3)1904\n4)1912","Which country won the 2014 Fifa World Cup?\n1)Brazil\n2)Germany\n3)Argentina\n4)Italy", "In what sport do you perform a slam dunk?\n1)Baseball\n2)Tennis\n3)Volleyball\n4)Basketball")
+var questionbank8:array 0..3 of string:= init("What is the nickname of New Zealand's National Volleyball team?\n1)Wallabies\n2)Springboks\n3)All Blacks\n4)Red Roses", "Which city hosted the 2008 Summer Olympics?\n1)London\n2)Bejing\n3)Athens\n4)Sydney","Which country is known for Sumo-Wrestling?\n1)China\n2)Japan\n3)South Korea\n4)Mongolia", "In meters, how long is a official Olympic swimming pool?\n1)25\n2)50\n3)100\n4)75")
+var questionbank9:array 0..3 of string:= init("What is the correct symbol for 'Gold'?\n1)Au\n2)Ag\n3)Gd\n4)Fe","What is approximately the speed of light in a vacuum?\n1)300,000KM/s\n2)150,000KM/s\n3)1,000KM/s\n4)500,000KM/s","What is the smallest unit of life?\n1)Organism\n2)Tissue\n3)Organ\n4)Cell","Which organ in the human body is primarily responsible for detoxification?\n1)Heart\n2)Liver\n3)Kidney\n4)Lungs")
+var questionbank10:array 0..3 of string:= init("What is the most abundant gas in Earth's atmosphere?\n1)Oxygen\n2)Nitrogen\n3)Carbon Dioxide\n4)Argon", "What planet is known as the 'Red Planet'?\n1)Venus\n2)Mars\n3)Jupiter\n4)Saturn","What is the powerhouse of the cell?\n1)Nucleus\n2)Ribosome\n3)Mitochondria\n4)Golgi Apparatus", "What do plants primarily use for photosynthesis\n1)Oxygen\n2)Carbon Dioxide\n3)Nitrogen\n4)Hydrogen")
+var answerbank1:array 0..3 of string:= init("1", "3","4", "2")
+var answerbank2:array 0..3 of string:= init("2","3","3","1")
+var answerbank3:array 0..3 of string:= init("1","4","2","2")
+var answerbank4:array 0..3 of string:= init("3","2","4","1")
+var answerbank5:array 0..3 of string:= init("1","3","1","2")
+var answerbank6:array 0..3 of string:= init("4","2","2","4")
+var answerbank7:array 0..3 of string:= init("2","1","2","4")
+var answerbank8:array 0..3 of string:= init("4","2","2","2")
+var answerbank9:array 0..3 of string:= init("1","1","4","2")
+var answerbank10:array 0..3 of string:= init("2","2","3","2")
+var ans1, ans2, ans3, ans4, ans5, ans6, ans7, ans8, ans9, ans10 : string
+var x:int
+var correct, wrong, money: int
+money:= 500
+correct:= 0
+wrong:= 0
+var playagain:int
+playagain:=1
+
+
+loop
+    put"Are you ready to start?"
+        loop
+        exit when playagain=2
+        put"1 for yes, 2 for no."
+        get start
+        if(start=2)then
+            put"No problem! Take your time!"
+        else
+            exit
+            end if
+            end loop
+    loop
+        wrong:=0
+        money:= 500
+        correct:=0
+        put"-----------------------"
+        put"Please answer with the number only!"
+        put"More than 4 mistakes and you automatically lose."
+        put"-----------------------"
+        randint(x,0,3)
+        put questionbank1 (x)
+        get ans1
+        if(ans1=answerbank1(x))then
+            money:= money+100
+            correct:= correct + 1
+            put"-----------------------"
+            put"Off to a great start! Correct!"
+            put"Your total is $",money,"!"
+            put"-----------------------"
+        else
+            money:= money-25
+            wrong:= wrong + 1
+            put"-----------------------"
+            put"Not a great start. You'll recover!"
+            put"Your total is $",money,"!"
+            put"-----------------------"
+            exit when wrong>4
+        end if
+    
+            randint(x,0,3)
+        put questionbank2 (x)
+        get ans1
+        if(ans1=answerbank2(x))then
+            money:= money+100
+            correct:= correct + 1
+            put"-----------------------"
+            put"The prophecies were right! Correct!"
+            put"Your total is $",money,"!"
+            put"-----------------------"
+        else
+            money:= money-25
+            wrong:= wrong + 1
+            put"-----------------------"
+            put"A honest mistake."
+            put"Your total is $",money,"!"
+            put"-----------------------"
+            exit when wrong>4
+        end if
+    
+            randint(x,0,3)
+        put questionbank3 (x)
+        get ans1
+        if(ans1=answerbank3(x))then
+            money:= money+100
+            correct:= correct + 1
+            put"-----------------------"
+            put"Absolute cinema! Correct!"
+            put"Your total is $",money,"!"
+            put"-----------------------"
+        else
+            money:= money-25
+            wrong:= wrong + 1
+            put"-----------------------"
+            put"You can do better than that. Incorrect."
+            put"Your total is $",money,"!"
+            put"-----------------------"
+            exit when wrong>4
+        end if
+    
+            randint(x,0,3)
+        put questionbank4 (x)
+        get ans1
+        if(ans1=answerbank4(x))then
+            money:= money+100
+            correct:= correct + 1
+            put"-----------------------"
+            put"A true masterclass!"
+            put"Your total is $",money,"!"
+            put"-----------------------"
+        else
+            money:= money-25
+            wrong:= wrong + 1
+            put"-----------------------"
+            put"Unfortunately, the wrong answer."
+            put"Your total is $",money,"!"
+            put"-----------------------"
+            exit when wrong>4
+        end if
+    
+            randint(x,0,3)
+        put questionbank5 (x)
+        get ans1
+        if(ans1=answerbank5(x))then
+            money:= money+100
+            correct:= correct + 1
+            put"-----------------------"
+            put"Right again!"
+            put"Your total is $",money,"!"
+            put"-----------------------"
+        else
+            money:= money-25
+            wrong:= wrong + 1
+            put"-----------------------"
+            put"A for effort, just not in answers :("
+            put"Your total is $",money,"!"
+            put"-----------------------"
+            exit when wrong>4
+        end if
+    
+            randint(x,0,3)
+        put questionbank6 (x)
+        get ans1
+        if(ans1=answerbank6(x))then
+            money:= money+100
+            correct:= correct + 1
+            put"-----------------------"
+            put"Correct, a true genius!"
+            put"Your total is $",money,"!"
+            put"-----------------------"
+        else
+            money:= money-25
+            wrong:= wrong + 1
+            put"-----------------------"
+            put"Incorrect, you'll get  the next one!"
+            put"Your total is $",money,"!"
+            put"-----------------------"
+            exit when wrong>4
+        end if
+    
+            randint(x,0,3)
+        put questionbank7 (x)
+        get ans1
+        if(ans1=answerbank7(x))then
+            money:= money+100
+            correct:= correct + 1
+            put"-----------------------"
+            put"Ding Ding Ding!"
+            put"Your total is $",money,"!"
+            put"-----------------------"
+        else
+            money:= money-25
+            wrong:= wrong + 1
+            put"-----------------------"
+            put"Incorrect. Even my mom knew that one."
+            put"Your total is $",money,"!"
+            put"-----------------------"
+            exit when wrong>4
+        end if
+    
+            randint(x,0,3)
+        put questionbank8 (x)
+        get ans1
+        if(ans1=answerbank8(x))then
+            money:= money+100
+            correct:= correct + 1
+            put"-----------------------"
+            put"Almost as smart as Einstein!"
+            put"Your total is $",money,"!"
+            put"-----------------------"
+        else
+            money:= money-25
+            wrong:= wrong + 1
+            put"-----------------------"
+            put"Truly an unfortunate mistake!"
+            put"Your total is $",money,"!"
+            put"-----------------------"
+            exit when wrong>4
+        end if
+    
+            randint(x,0,3)
+        put questionbank9 (x)
+        get ans1
+        if(ans1=answerbank9(x))then
+            money:= money+100
+            correct:= correct + 1
+            put"-----------------------"
+            put"All day!"
+            put"Your total is $",money,"!"
+            put"-----------------------"
+        else
+            money:= money-25
+            wrong:= wrong + 1
+            put"-----------------------"
+            put"Unlucky, incorrect!"
+            put"Your total is $",money,"!"
+            put"-----------------------"
+            exit when wrong>4
+        end if
+    
+            randint(x,0,3)
+        put questionbank10 (x)
+        get ans1
+        if(ans1=answerbank10(x))then
+            money:= money+100
+            correct:= correct + 1
+            put"-----------------------"
+            put"How are you this smart?!"
+            put"Your total is $",money,"!"
+            put"-----------------------"
+            wrong:= 5
+            exit when wrong>4
+        else
+            money:= money-25
+            wrong:= wrong + 1
+            put"-----------------------"
+            put"You knew the answer, you just misclicked!"
+            put"Your total is $",money,"!"
+            put"-----------------------"
+            wrong:=5
+            exit when wrong>4
+        end if
+    end loop
+    put"The trivia has ended.!"
+    if(money>500)then
+        put"You made $",money-500,"!"
+    else
+        put"You lost $",500-money,"!"
+    end if
+
+    put"Would you like to play again?"
+    put"1)Yes, 2)No"
+    get playagain
+    if(playagain=1)then
+        put"Have fun!"
+    else
+        playagain:=2
+        put"Thanks for playing!"
+        exit
+    end if
+end loop
