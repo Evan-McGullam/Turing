@@ -1,0 +1,17 @@
+put "Welcome to the Number Guessing Game!"
+put "Please guess a number between 1-10."
+var x: int
+randint(x,1,10)
+put x
+var y: int
+get y
+
+loop
+    if(y=x)then
+        put "You got it!"
+        exit when y=x
+    else
+        put "Try again."
+        get y
+end if
+end loop
